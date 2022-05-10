@@ -5,6 +5,10 @@
 <head>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="views/bootstrap.min.css">
+	<script src="components/jquery-3.6.0.min.js"></script>
+	<script src="components/items.js"></script>
+  <link rel="stylesheet" href="C:\Users\Owner\git\assignment\PAF_ASSIGNMENT_INDIVIDUAL\WebContent\css\schedule.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
@@ -14,55 +18,61 @@
 </head>
  
 <body>
+<style>
+span.b {
+  display: inline-block;
+  width: 314px;
+  height: 200px;
+  padding: 5px;
+  border: 2px solid #F5FFFA;    
+  background-color: #F5F5F5; 
+  margin-right:40px;
+}
+
+li:hover {
+  background-color:#FFA500;
+}
+h4{
+margin-left:1px;
+}
+</style>
 <br>
 
 <div class="container">
-<img src="C:\Users\Owner\eclipse-workspace\PAF_ASSIGNMENT_INDIVIDUAL\WebContent\images\elec.jpg" alt="logo" width="60" height="50">
+<img src="C:\Users\Owner\git\assignment\PAF_ASSIGNMENT_INDIVIDUAL\WebContent\images\elec.jpg" alt="logo" width="50" height="35">
   <br><br>
   <!-- Nav pills -->
-  <ul class="nav nav-pills" role="tablist">
+  <ul class="nav" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" data-toggle="pill" href="#home">Home</a>
+      <a class="nav-link active" data-toggle="tab" href="#home">Schedules</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#menu1">Menu 1</a>
+      <a class="nav-link" data-toggle="tab" href="#menu1">Search</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" data-toggle="pill" href="#menu2">Menu 2</a>
+      <a class="nav-link" data-toggle="tab" href="#menu2">Alerts</a>
     </li>
   </ul>
 
   <!-- Tab panes -->
   <div class="tab-content">
     <div id="home" class="container tab-pane active"><br>
-      <h3>HOME</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <h3></h3>
+      <p></p>
       
-      <div class="container">
-       <form action="/action_page.php" class="needs-validation" novalidate>
-    <div class="form-group">
-      <label for="uname">Username:</label>
-      <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
-      <div class="valid-feedback">Valid.</div>
-      <div class="invalid-feedback">Please fill out this field.</div>
-    </div>
-    <div class="form-group">
-      <label for="pwd">Password:</label>
-      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
-      <div class="valid-feedback">Valid.</div>
-      <div class="invalid-feedback">Please fill out this field.</div>
-    </div>
-    <div class="form-group form-check">
-      <label class="form-check-label">
-        <input class="form-check-input" type="checkbox" name="remember" required> I agree on blabla.
-        <div class="valid-feedback">Valid.</div>
-        <div class="invalid-feedback">Check this checkbox to continue.</div>
-      </label>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+      
+      <div>
+       <div>
+       <span class="b"><center><img src="C:\Users\Owner\git\assignment\PAF_ASSIGNMENT_INDIVIDUAL\WebContent\images\2.png" alt="logo" width="60" height="60"></center><br><center><h4>Add Power cut schedule</h4></center><br><center><a href="scheduleform.jsp"><font color="#FFA500">CLICK HERE</font></a></center></span>
+     
+       <span class="b"><center><img src="C:\Users\Owner\git\assignment\PAF_ASSIGNMENT_INDIVIDUAL\WebContent\images\3.png" alt="logo" width="56" height="56"></center><br><center><h4>Edit Power cut schedule</h4></center><br><center><a href="https://courseweb.sliit.lk"><font color="#FFA500">CLICK HERE</font></a></center></span>
+       
+        <span class="b"><center><img src="C:\Users\Owner\git\assignment\PAF_ASSIGNMENT_INDIVIDUAL\WebContent\images\4.png" alt="logo" width="56" height="56"></center><br><center><h4>Remove Power cut schedule</h4></center><br><center><a href="https://courseweb.sliit.lk"><font color="#FFA500">CLICK HERE</font></a></center></span>
+       </div>
+        <div>
+       
+       </div>
       </div>
-      
       
       
     </div>

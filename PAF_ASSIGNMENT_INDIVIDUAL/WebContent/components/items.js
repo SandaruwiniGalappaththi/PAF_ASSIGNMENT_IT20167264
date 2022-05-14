@@ -1,7 +1,3 @@
-/**
- * 
- */
-
 $(document).ready(function() 
 { 
 if ($("#alertSuccess").text().trim() == "") 
@@ -30,7 +26,7 @@ if (status != true)
 var type = ($("#hidItemIDSave").val() == "") ? "POST" : "PUT";
  $.ajax(
  {
- url : "ScheduleAPI",
+ url : "ItemsAPI",
  type : type,
  data : $("#formItem").serialize(),
  dataType : "text",
@@ -45,33 +41,40 @@ var type = ($("#hidItemIDSave").val() == "") ? "POST" : "PUT";
 $(document).on("click", ".btnUpdate", function(event) 
 { 
  $("#hidItemIDSave").val($(this).data("itemid")); 
- $("#location").val($(this).closest("tr").find('td:eq(0)').text()); 
- $("#start").val($(this).closest("tr").find('td:eq(1)').text()); 
- $("#end").val($(this).closest("tr").find('td:eq(2)').text()); 
- $("#date").val($(this).closest("tr").find('td:eq(3)').text()); 
+ $("#itemCode").val($(this).closest("tr").find('td:eq(0)').text()); 
+ $("#itemName").val($(this).closest("tr").find('td:eq(1)').text()); 
+ $("#itemDesc").val($(this).closest("tr").find('td:eq(2)').text()); 
 }); 
 // CLIENT-MODEL================================================================
 function validateItemForm() 
 { 
 // CODE
-if ($("#location").val().trim() == "") 
+if ($("#itemCode").val().trim() == "") 
  { 
- return "Insert location"; 
+ return "Insert Item Code."; 
  } 
 // NAME
-if ($("#start").val().trim() == "") 
+if ($("#itemName").val().trim() == "") 
  { 
- return "Insert start time."; 
+ return "Insert Item Name."; 
  }
 // PRICE-------------------------------
-if ($("#end").val().trim() == "") 
+if ($("#itemPrice").val().trim() == "") 
  { 
- return "Insert end time."; 
+ return "Insert Item Price."; 
  } 
-// DESCRIPTION------------------------
-if ($("#date").val().trim() == "") 
+// is numerical value
+var tmpPrice = $("#itemPrice").val().trim(); 
+if (!$.isNumeric(tmpPrice)) 
  { 
- return "Insert date"; 
+ return "Insert a numerical value for Item Price."; 
+ } 
+// convert to decimal price
+ $("#itemPrice").val(parseFloat(tmpPrice).toFixed(2)); 
+// DESCRIPTION------------------------
+if ($("#itemDesc").val().trim() == "") 
+ { 
+ return "Insert Item Description."; 
  } 
 return true; 
 }
@@ -112,7 +115,7 @@ $(document).on("click", ".btnRemove", function(event)
 {
  $.ajax(
  {
- url : "ScheduleAPI",
+ url : "ItemsAPI",
  type : "DELETE",
  data : "itemID=" + $(this).data("itemid"),
  dataType : "text",

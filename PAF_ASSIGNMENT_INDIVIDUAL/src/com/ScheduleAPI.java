@@ -1,5 +1,4 @@
 package com;
-import com.Schedule;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -40,7 +39,8 @@ public class ScheduleAPI extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
+		
+		System.out.println("came to servlet");
 		String output = s.insertschedule(request.getParameter("location"),
 				request.getParameter("start"),
 				request.getParameter("end"),
@@ -55,12 +55,19 @@ public class ScheduleAPI extends HttpServlet {
 	protected void doPut(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		Map paras = getParasMap(request);
+		System.out.println("came to updt");
 		 String output = s.updateSchedule(paras.get("hidItemIDSave").toString(),
-		 paras.get("location").toString(),
-		paras.get("start").toString(),
-		paras.get("end").toString(),
-		paras.get("date").toString(),
-		paras.get("date").toString());
+				 request.getParameter("location"),
+				 request.getParameter("start"),
+				 request.getParameter("end"),
+				 request.getParameter("date"),
+				 request.getParameter("date"));
+		 System.out.println(paras.get("hidItemIDSave").toString());
+		 System.out.println( request.getParameter("start"));
+		 System.out.println(request.getParameter("location"));
+		 System.out.println(request.getParameter("end"));
+		 System.out.println(request.getParameter("date"));
+		 
 		response.getWriter().write(output);
 	}
 
@@ -69,8 +76,9 @@ public class ScheduleAPI extends HttpServlet {
 	 */
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		System.out.println("came to delt");
 		Map paras = getParasMap(request);
-		 String output = s.deleteSchedule(paras.get("ID").toString());
+		 String output = s.deleteSchedule(paras.get("itemID").toString());
 		response.getWriter().write(output);
 	}
 

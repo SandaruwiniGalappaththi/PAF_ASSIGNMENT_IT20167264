@@ -1,4 +1,4 @@
-<%@page import="com.TimeTable"%>
+<%@page import="com.Alert"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
    <link rel="stylesheet" href="views/bootstrap.min.css">
 <script src="components/jquery-3.6.0.min.js"></script>
 <script src="components/searchAcc.js"></script>
-<title>earchByAcc</title>
+<title>SetAlert</title>
 </head>
 <body>
 <style>
@@ -17,12 +17,15 @@
 margin-left:10px;
 }
 </style>
-<div class= "container">
-<form id="searchAccc" name="searchAccc" method="post" action="searchAcc.jsp">
+<div class="container">
+<form id="setAlert" name="setAlert" method="post" action="setAlert.jsp">
 Account Number
 <input id="acc" name="acc" type="text"
  class="form-control form-control-sm">
 <br>
+Email
+<input id="mail" name="mail" type="email"
+ class="form-control form-control-sm"><br><br>
 <input id="btnSave" name="btnSave" type="submit" value="Save"
  class="btn btn-primary">
  <a href="schedule.jsp"><buttton id="back" type="button"class="btn btn-secondary">Back</buttton>
@@ -30,12 +33,11 @@ Account Number
 
 
 
- 
 <%
 if (request.getParameter("acc") != null)
 {
-TimeTable tt = new TimeTable();
-out.print(tt.readByAcc(request.getParameter("acc")));
+Alert alert = new Alert();
+out.print(alert.checkVerification(request.getParameter("acc"),request.getParameter("mail")));
 }
 %>
 </body>

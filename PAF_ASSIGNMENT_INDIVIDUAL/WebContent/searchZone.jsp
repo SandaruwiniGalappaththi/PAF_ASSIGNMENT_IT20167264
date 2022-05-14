@@ -9,7 +9,7 @@
    <link rel="stylesheet" href="views/bootstrap.min.css">
 <script src="components/jquery-3.6.0.min.js"></script>
 <script src="components/searchAcc.js"></script>
-<title>earchByAcc</title>
+<title>earchByZone</title>
 </head>
 <body>
 <style>
@@ -18,9 +18,9 @@ margin-left:10px;
 }
 </style>
 <div class= "container">
-<form id="searchAccc" name="searchAccc" method="post" action="searchAcc.jsp">
-Account Number
-<input id="acc" name="acc" type="text"
+<form id="searchZone" name="searchZone" method="post" action="searchZone.jsp">
+Zone
+<input id="zone" name="zone" type="text"
  class="form-control form-control-sm">
 <br>
 <input id="btnSave" name="btnSave" type="submit" value="Save"
@@ -32,10 +32,10 @@ Account Number
 
  
 <%
-if (request.getParameter("acc") != null)
+if (request.getParameter("zone") != null)
 {
 TimeTable tt = new TimeTable();
-out.print(tt.readByAcc(request.getParameter("acc")));
+out.print(tt.readByZone(request.getParameter("zone")));
 }
 %>
 </body>

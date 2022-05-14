@@ -18,6 +18,11 @@
 <title>scheduleForm</title>
 </head>
 <body>
+<style>
+#back{
+margin-left:10px;
+}
+</style>
 <div class= "container">
 <form id="formItem" name="formItem" method="post" action="scheduleform.jsp">
 Location
@@ -34,7 +39,7 @@ Location
  class="form-control form-control-sm">
 <br>
 <input id="btnSave" name="btnSave" type="button" value="Save"
- class="btn btn-primary"><br><br>
+ class="btn btn-primary"><a href="schedule.jsp"><buttton id="back" type="button"class="btn btn-secondary">Back</buttton></a><br><br>
 <input type="hidden" id="hidItemIDSave" name="hidItemIDSave" value="">
 </form>
 

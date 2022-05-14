@@ -78,16 +78,16 @@ margin-left:1px;
       
     </div>
     <div id="menu1" class="container tab-pane fade"><br>
-      <h3>Menu 1</h3>
+      <h6>Search your premises power cut schedule!</h6>
       
       
        <div>
        <div>
        <span class="b"><center><img src="C:\Users\Owner\git\assignment\PAF_ASSIGNMENT_INDIVIDUAL\WebContent\images\2.png" alt="logo" width="60" height="60"></center><br><center><h4>Search by Account Number</h4></center><br><center><a href="searchAcc.jsp"><font color="#FFA500">CLICK HERE</font></a></center></span>
      
-       <span class="b"><center><img src="C:\Users\Owner\git\assignment\PAF_ASSIGNMENT_INDIVIDUAL\WebContent\images\3.png" alt="logo" width="56" height="56"></center><br><center><h4>Search by Location</h4></center><br><center><a href="https://courseweb.sliit.lk"><font color="#FFA500">CLICK HERE</font></a></center></span>
+       <span class="b"><center><img src="C:\Users\Owner\git\assignment\PAF_ASSIGNMENT_INDIVIDUAL\WebContent\images\3.png" alt="logo" width="56" height="56"></center><br><center><h4>Search by Location</h4></center><br><center><a href="searchLocation.jsp"><font color="#FFA500">CLICK HERE</font></a></center></span>
        
-        <span class="b"><center><img src="C:\Users\Owner\git\assignment\PAF_ASSIGNMENT_INDIVIDUAL\WebContent\images\4.png" alt="logo" width="56" height="56"></center><br><center><h4>Search by zone</h4></center><br><center><a href="https://courseweb.sliit.lk"><font color="#FFA500">CLICK HERE</font></a></center></span>
+        <span class="b"><center><img src="C:\Users\Owner\git\assignment\PAF_ASSIGNMENT_INDIVIDUAL\WebContent\images\4.png" alt="logo" width="56" height="56"></center><br><center><h4>Search by zone</h4></center><br><center><a href="searchZone.jsp"><font color="#FFA500">CLICK HERE</font></a></center></span>
        </div>
         <div>
        
@@ -96,8 +96,11 @@ margin-left:1px;
       
        </div>
     <div id="menu2" class="container tab-pane fade"><br>
-      <h3>Menu 2</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+      <h6>Set Daily power cut Alerts! Adjust yourself</h6>
+      <div>
+        <span class="b"><center><img src="C:\Users\Owner\git\assignment\PAF_ASSIGNMENT_INDIVIDUAL\WebContent\images\4.png" alt="logo" width="56" height="56"></center><br><center><h4>Set Power Cut Mail Alert</h4></center><br><center><a href="setAlert.jsp"><font color="#FFA500">CLICK HERE</font></a></center></span>
+     </div>
+      
     </div>
   </div>
 </div>

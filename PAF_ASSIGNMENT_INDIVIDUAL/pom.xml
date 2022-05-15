@@ -24,8 +24,8 @@
       </plugin>
     </plugins>
   </build>
-   <dependencies>
-    <dependency>
+     <dependencies>
+  	<dependency>
       <groupId>mysql</groupId>
       <artifactId>mysql-connector-java</artifactId>
       <version>8.0.28</version>
@@ -65,5 +65,26 @@
      <artifactId>jsoup</artifactId>
      <version>1.8.1</version>
    </dependency>
+
+   <dependency>
+   	<groupId>org.codehaus.jackson</groupId>
+   	<artifactId>jackson-mapper-asl</artifactId>
+   	<version>1.9.13</version>
+   </dependency>
+   <dependency>
+   	<groupId>javax.mail</groupId>
+   	<artifactId>javax.mail-api</artifactId>
+   	<version>1.6.2</version>
+   </dependency>
+   <dependency>
+   	<groupId>com.sun.mail</groupId>
+   	<artifactId>javax.mail</artifactId>
+   	<version>1.6.2</version>
+   </dependency>
+    <dependency>
+ <groupId>com.googlecode.json-simple</groupId>
+ <artifactId>json-simple</artifactId>
+ <version>1.1</version>
+ </dependency>
   </dependencies>
 </project>

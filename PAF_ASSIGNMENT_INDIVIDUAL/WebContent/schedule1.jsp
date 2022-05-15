@@ -74,7 +74,10 @@ background-color: orange;
     <button id= "alt">Send daily power cut mail Alerts</button>
 </a>
 </div>
-  
+  <%
+    PowerCutMail alt = new PowerCutMail();
+ 	out.print(alt.sendToRegistertedUsers());
+%>
   
   <!-- Nav pills -->
   <ul class="nav" role="tablist">

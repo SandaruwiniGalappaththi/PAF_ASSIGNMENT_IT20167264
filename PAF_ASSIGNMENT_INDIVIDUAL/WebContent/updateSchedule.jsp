@@ -15,7 +15,7 @@
   
 
 
-<title>scheduleForm</title>
+<title>updateSchedule</title>
 </head>
 <body>
 <style>
@@ -38,14 +38,20 @@ Location
 <input id="date" name="date" type="text"
  class="form-control form-control-sm">
 <br>
-<input id="btnSave" name="btnSave" type="button" value="Save"
+<input id="btnSave" name="btnSave" type="button" value="Update and Save"
  class="btn btn-primary"><a href="schedule.jsp"><buttton id="back" type="button"class="btn btn-secondary">Back</buttton></a><br><br>
 <input type="hidden" id="hidItemIDSave" name="hidItemIDSave" value="">
 </form>
 
 <div id="alertSuccess" class="alert alert-success"></div>
-<div id="alertError" class="alert alert-danger"></div>
+<div id="alertError" class="alert alert
+-danger"></div>
 
-
+ <div id="divItemsGrid">
+<%
+ 	Schedule s = new Schedule();
+ 	out.print(s.readSchedule());
+%>
+</div>
 </body>
 </html>

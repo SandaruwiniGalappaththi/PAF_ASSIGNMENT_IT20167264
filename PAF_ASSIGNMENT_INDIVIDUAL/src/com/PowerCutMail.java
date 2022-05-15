@@ -125,7 +125,7 @@ public class PowerCutMail {
 														 // execute the statement
 														 preparedStmt.execute();
 														 insertMailData(ID,location,status);//calling method to insert mail data to table
-														 
+														   System.out.println("ok");
 			        	
 									 	}
 						 	}

@@ -57,21 +57,15 @@ public class ScheduleAPI extends HttpServlet {
 		Map paras = getParasMap(request);
 		System.out.println("came to updt");
 		 String output = s.updateSchedule(paras.get("hidItemIDSave").toString(),
-				 request.getParameter("location"),
-				 request.getParameter("start"),
-				 request.getParameter("end"),
-				 request.getParameter("date"),
-				 request.getParameter("date"));
-		 System.out.println(paras.get("hidItemIDSave").toString());
-		 System.out.println( request.getParameter("start"));
-		 System.out.println(request.getParameter("location"));
-		 System.out.println(request.getParameter("end"));
-		 System.out.println(request.getParameter("date"));
-		 
+				 paras.get("location").toString(),
+				paras.get("start").toString(),
+				paras.get("end").toString(),paras.get("date").toString(),
+				paras.get("date").toString());
+				response.getWriter().write(output);
 		response.getWriter().write(output);
 	}
 
-	/**
+	/**z
 	 * @see HttpServlet#doDelete(HttpServletRequest, HttpServletResponse)
 	 */
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

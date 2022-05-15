@@ -82,12 +82,18 @@ function onItemSaveComplete(response, status)
 {
 if (status == "success")
  {
+
+$("#alertSuccess").text("Successfully saved.");
+$("#alertSuccess").show();
+$("#hidItemIDSave").val("");
+$("#formItem")[0].reset();
  var resultSet = JSON.parse(response);
+$("#divItemsGrid").html(resultSet.data);
+
+
  if (resultSet.status.trim() == "success")
  {
- $("#alertSuccess").text("Successfully saved.");
- $("#alertSuccess").show();
- $("#divItemsGrid").html(resultSet.data);
+
  } else if (resultSet.status.trim() == "error")
  {
  $("#alertError").text(resultSet.data);
@@ -118,6 +124,7 @@ $(document).on("click", ".btnRemove", function(event)
  dataType : "text",
  complete : function(response, status)
  {
+
  onItemDeleteComplete(response.responseText, status);
  }
  });
@@ -127,6 +134,9 @@ function onItemDeleteComplete(response, status)
 {
 if (status == "success")
  {
+ alert("successfully deleted!");
+   $("#alertSuccess").text("Successfully deleted.");
+ $("#alertSuccess").show();
  var resultSet = JSON.parse(response);
  if (resultSet.status.trim() == "success")
  {

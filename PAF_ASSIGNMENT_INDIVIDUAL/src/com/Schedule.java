@@ -17,7 +17,7 @@ public class Schedule {
 			 con= DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/powercut", "root", "sandaru@1S");
 			 
 			 //For testing
-			 System.out.print("Successfully connected");
+			 System.out.println("Successfully connected");
 		 } catch(Exception e) {
 			 e.printStackTrace();
 		 }
@@ -30,7 +30,7 @@ public class Schedule {
 	
 			//method for insert power cut schedules
 			public String insertschedule(String location1, String start1, String end1, String onDate1, String createdDate1)
-					 {       System.out.println("insert fun");
+					 {       System.out.println("");
 							String output = "";
 					 try
 					 {
@@ -75,8 +75,7 @@ public class Schedule {
 			 {
 				 		return "Error while connecting to the database for reading."; }
 				 	// Prepare the HTML table to be displayed
-				 	output = "<html><link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css\">"
-				 			+ "  <table border='1'><tr><th class=\"col-sm-4\"style=\"background-color:lavender;\">Location</th><th class=\"col-sm-4\"style=\"background-color:lavender;\">Start Time</th>" +
+				 	output = "<table border='1'><tr><th class=\"col-sm-4\"style=\"background-color:lavender;\">Location</th><th class=\"col-sm-4\"style=\"background-color:lavender;\">Start Time</th>" +
 				 				"<th class=\"col-sm-4\" style=\"background-color:lavender;\">End Time</th><th class=\"col-sm-4\" style=\"background-color:lavender;\">On Date</th>" +
 				 				 "<th>Update</th><th>Remove</th></tr>"
 				 				+"</tr>";

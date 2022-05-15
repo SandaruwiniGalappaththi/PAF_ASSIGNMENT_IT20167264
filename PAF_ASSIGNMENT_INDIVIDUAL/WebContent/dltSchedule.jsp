@@ -15,7 +15,7 @@
   
 
 
-<title>scheduleForm</title>
+<title>dltSchedule</title>
 </head>
 <body>
 <style>
@@ -24,28 +24,15 @@ margin-left:10px;
 }
 </style>
 <div class= "container">
-<form id="formItem" name="formItem" method="post" action="scheduleform.jsp">
-Location
-<input id="location" name="location" type="text"
- class="form-control form-control-sm">
-<br>Start time
-<input id="start" name="start" type="text"
- class="form-control form-control-sm">
-<br> End time
-<input id="end" name="end" type="text"
- class="form-control form-control-sm">
-<br> Date
-<input id="date" name="date" type="text"
- class="form-control form-control-sm">
-<br>
-<input id="btnSave" name="btnSave" type="button" value="Save"
- class="btn btn-primary"><a href="schedule.jsp"><buttton id="back" type="button"class="btn btn-secondary">Back</buttton></a><br><br>
-<input type="hidden" id="hidItemIDSave" name="hidItemIDSave" value="">
-</form>
 
 <div id="alertSuccess" class="alert alert-success"></div>
 <div id="alertError" class="alert alert-danger"></div>
 
-
+ <div id="divItemsGrid">
+<%
+ 	Schedule s = new Schedule();
+ 	out.print(s.readSchedule());
+%>
+</div>
 </body>
 </html>
